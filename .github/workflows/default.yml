@@ -15,9 +15,7 @@ jobs:
       - name: Set up cloud SDK
         uses: google-github-actions/setup-gcloud@v0
       - name: Configure Docker
-        run: 'gcloud auth configure-docker'
-      - name: Authenticate Docker
-        run: 'echo ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }} | docker login -u _json_key --password-stdin https://asia.gcr.io'
+        run: 'gcloud auth configure-docker -q'
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v1
         with:
