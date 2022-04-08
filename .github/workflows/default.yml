@@ -21,9 +21,9 @@ jobs:
         with:
           terraform_version: 1.1.7
       - name: Build docker image
-        run: 'docker build -t asia.gcr.io/fabled-citadel-342513/learn-go-echo .'
+        run: 'docker build -t asia.gcr.io/scheduled-chat-bot/learn-go-echo .'
       - name: Push docker image
-        run: 'docker push asia.gcr.io/fabled-citadel-342513/learn-go-echo'
+        run: 'docker push asia.gcr.io/scheduled-chat-bot/learn-go-echo'
       - name: Terraform Init
         run: 'terraform init'
       - name: Terraform Plan
