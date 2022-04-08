@@ -24,7 +24,7 @@ jobs:
         run: 'docker build -t asia.gcr.io/scheduled-chat-bot/learn-go-echo .'
       - name: Push docker image
         run: 'docker push asia.gcr.io/scheduled-chat-bot/learn-go-echo'
-      - name: Terraform Init
+      - name: Initialize Terraform
         run: 'terraform init'
-      - name: Terraform Apply
-        run: 'TF_LOG=DEBUG terraform apply -auto-approve -replace=google_cloud_run_service.my_web_app'
+      - name: Apply Terraform
+        run: 'terraform apply -auto-approve -replace=google_cloud_run_service.my_web_app'
